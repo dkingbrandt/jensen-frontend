@@ -1,0 +1,19 @@
+{
+  "name": "jensen-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "parcel serve src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "normalize.css": "^8.0.1",
+    "parcel": "^2.2.0",
+    "sass": "^1.48.0"
+  }
+}
