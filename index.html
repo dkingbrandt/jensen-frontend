@@ -9,7 +9,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
-  <div id="wrapper">
+  <div id="deleteContainer">
     <form method="post">
       Username:<br />
       <input
@@ -35,8 +35,8 @@
           data-sitekey="6LcQ3hseAAAAAJ8G0qbWI92yuxhwd5Ya3HEzHubl"
 
 
-          data-callback="recaptcha_callback" 
-        ></div>
+          data-callback="recaptcha_callback" required>
+        </div>
       </div>
       <br /><br />
       <input onclick= hiddenfunction() type="submit" value="Login" disabled id="register-btn" />
