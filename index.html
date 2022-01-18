@@ -9,6 +9,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
+  <div id="wrapper">
     <form method="post">
       Username:<br />
       <input
@@ -30,15 +31,15 @@
       />
       <div class="form-group">
         <div
-          class="g-recaptcha"
+          class="g-recaptcha" 
           data-sitekey="6LcQ3hseAAAAAJ8G0qbWI92yuxhwd5Ya3HEzHubl"
 
 
-          data-callback="recaptcha_callback"
+          data-callback="recaptcha_callback" 
         ></div>
       </div>
       <br /><br />
-      <input type="submit" value="Login" disabled id="register-btn" />
+      <input onclick= hiddenfunction() type="submit" value="Login" disabled id="register-btn" />
     </form>
 
     <div id="cookiePopup">
@@ -49,7 +50,9 @@
         accept of our <a href="#">Cookie Policy & Privacy</a></p
       >
       <button id="acceptCookie">Accept</button>
+     
     </div>
+  </div>   
 
     <script src="app.js"></script>
   </body>

@@ -1,19 +1,18 @@
 document.addEventListener("submit", (event) => {
-    console.log("Validating");
-    let user = document.getElementById("user").value;
-    let password = document.getElementById("password").value;
-  
-    let request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:5500/authorize");
-    //request.send(new FormData(formElement));
-    console.log("Validated");
-  
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send(`user=${user}&password=${password}`);
-  
-    event.preventDefault();
-  });
-  
+  console.log("Validating");
+  let user = document.getElementById("user").value;
+  let password = document.getElementById("password").value;
+
+  let request = new XMLHttpRequest();
+  request.open("POST", "http://localhost:5500/authorize");
+  //request.send(new FormData(formElement));
+  console.log("Validated");
+
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send(`user=${user}&password=${password}`);
+
+  event.preventDefault();
+});
   // recaptcha
   
   // Add cookie popup
@@ -73,13 +72,37 @@ document.addEventListener("submit", (event) => {
       document.getElementById("cookiePopup").style.display = "none";
       user.removeAttribute("disabled");
       password.removeAttribute("disabled");
+      
       function recaptcha_callback() {
         let registerBtn = document.querySelector("#register-btn");
-        registerBtn.removeAttribute("disabled");
+        registerBtn.removeAttribute("disabled"); 
         registerBtn.style.cursor = "pointer";
+        
+       
+       
       }
-      recaptcha_callback();
+     
+      recaptcha_callback(); 
+      
     }
+   
+      
   };
   checkCookie();
+
+ 
+  
+  function hiddenfunction() {
+    var password = document.getElementById("password")
+    var user = document.getElementById("user")
+    let x = document.getElementById("wrapper");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else if ( password.value === "password" && user.value === "user") {
+      x.style.display = "none";
+      
+     
+    } 
+    
+  }
   
