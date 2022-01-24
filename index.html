@@ -9,7 +9,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
-  <div id="deleteContainer">
+    <div id="deleteContainer">
     <form method="post">
       Username:<br />
       <input
@@ -31,28 +31,53 @@
       />
       <div class="form-group">
         <div
-          class="g-recaptcha" 
-          data-sitekey="6LcQ3hseAAAAAJ8G0qbWI92yuxhwd5Ya3HEzHubl"
-
-
-          data-callback="recaptcha_callback" required>
-        </div>
+          class="g-recaptcha"
+          data-sitekey="6LfOqhUeAAAAAMQTDQ8eD4SxhVjX35NhS0YOzulK"
+          data-callback="recaptcha_callback"
+        ></div>
       </div>
       <br /><br />
-      <input onclick= hiddenfunction() type="submit" value="Login" disabled id="register-btn" />
+      <input onclick= hiddenfunction() type="submit" value="Login" disabled id="login-btn" />
+     
+
     </form>
+
+    <div id="rejectPopup">
+      <p>
+        Our website uses cookies to provide your browsing experience and
+        relavent informations.Before continuing to use our website,agree &
+        <a href="#" id="cookieConsent">accept </a>our <a href="#">Cookie Policy & Privacy</a>
+      </p>
+    </div>
 
     <div id="cookiePopup">
       <h4>Cookie Consent</h4>
-      <p
-        >Our website uses cookies to provide your browsing experience and
+      <p></p>
+        Our website uses cookies to provide your browsing experience and
         relavent informations.Before continuing to use our website, you agree &
-        accept of our <a href="#">Cookie Policy & Privacy</a></p
-      >
+        accept of our <a href="#">Cookie Policy & Privacy</a>
+      </p>
+      <button onclick=rejectCookieFunction() id="rejectCookie">Reject</button>
       <button id="acceptCookie">Accept</button>
      
     </div>
-  </div>   
+    </div>
+    <div id="application">
+      <h1>Hej</h1>
+      <button onclick= logOutFunction() type="submit" value="log-out" id="log-outBtn">Log out</button>
+    </div>
+    
+    <footer>
+      <p
+        >test Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iste
+        voluptates sunt officia doloribus quod delectus, rem temporibus ab ipsa
+        nobis magni neque recusandae adipisci fuga, quas odio. Odit, explicabo.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod neque
+        voluptate repellat corporis, magni ea assumenda autem perferendis nihil,
+        labore quisquam optio officiis? Veniam harum incidunt, similique tempore
+        eos quis?
+      </p>
+    </footer>
 
     <script src="app.js"></script>
   </body>
