@@ -10,10 +10,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "audit-log": "^0.9.1",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
+    "mongoose": "^6.1.8",
     "normalize.css": "^8.0.1",
     "parcel": "^2.2.0",
     "sass": "^1.48.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkingbrandt/jensen-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dkingbrandt/jensen-frontend/issues"
+  },
+  "homepage": "https://github.com/dkingbrandt/jensen-frontend#readme"
 }

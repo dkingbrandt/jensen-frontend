@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
     <title>Jensen-Frontend</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
-    <div id="deleteContainer">
+  <div id="wrapper">
+
+    <img src="/img/marvel-2.jpg" alt="marvel">
+    <div  id="deleteContainer">
+      
+      
     <form method="post">
-      Username:<br />
+     <p class="writeUsername">Username:</p> <br />
       <input
         id="user"
         type="text"
@@ -20,7 +28,7 @@
         required
         disabled
       /><br /><br />
-      Password:<br />
+      <p class="writePassword">Password:</p><br />
       <input
         id="password"
         type="password"
@@ -42,7 +50,7 @@
 
     </form>
 
-    <div id="rejectPopup">
+    <div  id="rejectPopup">
       <p>
         Our website uses cookies to provide your browsing experience and
         relavent informations.Before continuing to use our website,agree &
@@ -63,22 +71,13 @@
     </div>
     </div>
     <div id="application">
-      <h1>Hej</h1>
+      <h1 class="secretPage">MARVEL for life</h1>
       <button onclick= logOutFunction() type="submit" value="log-out" id="log-outBtn">Log out</button>
     </div>
     
-    <footer>
-      <p
-        >test Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iste
-        voluptates sunt officia doloribus quod delectus, rem temporibus ab ipsa
-        nobis magni neque recusandae adipisci fuga, quas odio. Odit, explicabo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod neque
-        voluptate repellat corporis, magni ea assumenda autem perferendis nihil,
-        labore quisquam optio officiis? Veniam harum incidunt, similique tempore
-        eos quis?
-      </p>
-    </footer>
+  
 
     <script src="app.js"></script>
+  </div>
   </body>
 </html>

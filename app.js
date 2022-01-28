@@ -7,9 +7,9 @@ document.addEventListener("submit", (event) => {
 
   
   let request = new XMLHttpRequest();
-  let url =  "https://dan-backend.herokuapp.com/"
-  request.open("GET", url);
-  
+  let url =  "https://dan-backend.herokuapp.com/authorize"
+  request.open("POST", url);
+
   //request.send(new FormData(formElement));
   console.log("Validated");
 
