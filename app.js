@@ -1,15 +1,10 @@
-
-
 document.addEventListener("submit", (event) => {
   console.log("Validating");
   let user = document.getElementById("user").value;
   let password = document.getElementById("password").value;
 
-  
   let request = new XMLHttpRequest();
-  let url =  "https://dan-backend.herokuapp.com/authorize"
-  request.open("POST", url);
-
+  request.open("POST", "https://dan-backend.herokuapp.com/authorize");
   //request.send(new FormData(formElement));
   console.log("Validated");
 
@@ -105,11 +100,41 @@ function hiddenfunction() {
     (password.value === "Pan" && user.value === "Dan") ||
     (password.value === "Bläbläblä" && user.value === "Rebecca")
   ) {
+    let img = document.getElementById("img");
     x.style.display = "none";
+    img.style.display ="none"
     var application = document.getElementById("application");
     application.style.display = "block";
+   
+    
   }
   recaptcha_callback();
+}
+
+function marvelFunction() {
+  let marvelHero = [
+    "SPIDER-MAN: REMEMBER, WITH GREAT POWER COMES GREAT RESPONSIBILITY.",
+    "IRON MAN: I AM IRON MAN.",
+    "CAPTAIN AMERICA: AVENGERS! ASSEMBLE.",
+    "THE HULK: HULK SMASH.",
+    "THOR: I NOTICE YOU COPIED MY BEARD.",
+    "WOLVERINE: YOU KNOW, SOMETIMES WHEN YOU CAGE THE BEAST, THE BEAST GETS ANGRY.",
+    "ANT-MAN: WHY DONT YOU PICK ON SOMEONE YOUR OWN SIZE.",
+    "THE WASP: I HAVE WINGS. WHY WOULD I GO LOW?",
+    "BLACK WIDOW: HEY, FELLAS. EITHER ONE OF YOU KNOW WHERE THE SMITHSONIAN IS? IM HERE TO PICK UP A FOSSIL.",
+    "HAWKEYE: My GO-TO WEAPON IS TWO STICKS AND A STRING, SO…",
+    "CAPTAIN MARVEL: IM NOT GONNA FIGHT YOUR WAR. IM GOING TO END IT.",
+    "BLACK PANTHER: WAKANDA FOREVER.",
+    "DOCTOR STRANGE: WE NEVER LOSE OUR DEAMONS, WE ONLY LEARN TO LIVE ABOVE THEM.",
+    "DEADPOOL: BAD DEADPOOL... GOOD DEADPOOL!",
+    "BLADE: THERE ARE WORSE THINGS OUT TONIGHT THAN VAMPIRES.",
+    "THE FALCON: EVERYTIME SOMETHING GETS BETTER FOR ONE GROUP, IT GETS WORSE FOR ANOTHER",
+    "THE WINTER SOLDIER: I JUST WENT FROM ONE FIGHT TO ANOTHER FOR 90 YEARS.",
+    "GHOST RIDER: I RIDE AND HELL FOLLOWS WITH ME",
+  ];
+  let randomHero = marvelHero[Math.floor(Math.random() * marvelHero.length)];
+
+  document.getElementById("secretPage").innerHTML = randomHero;
 }
 
 function logOutFunction() {
