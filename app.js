@@ -10,6 +10,7 @@ document.addEventListener("submit", (event) => {
 
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.send(`user=${user}&password=${password}`);
+  
 
   event.preventDefault();
 });
@@ -83,6 +84,7 @@ let checkCookie = function () {
 
 checkCookie();
 
+
 function recaptcha_callback() {
   let registerBtn = document.querySelector("#login-btn");
   registerBtn.removeAttribute("disabled");
@@ -94,18 +96,16 @@ function hiddenfunction() {
   let x = document.getElementById("deleteContainer");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else if (
-    (password.value === "password" && user.value === "user") ||
-    (password.value === "Pannika" && user.value === "Annika") ||
-    (password.value === "Pan" && user.value === "Dan") ||
-    (password.value === "Bläbläblä" && user.value === "Rebecca")
-  ) {
+    
+    
+  } else if 
+    (password.value === "password" && user.value === "user"){
+  
     let img = document.getElementById("img");
     x.style.display = "none";
     img.style.display ="none"
     var application = document.getElementById("application");
     application.style.display = "block";
-   
     
   }
   recaptcha_callback();
