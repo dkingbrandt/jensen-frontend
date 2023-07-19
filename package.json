@@ -16,7 +16,7 @@
     "express": "^4.17.2",
     "marvel-characters": "^1.0.3",
     "marvel-comics-characters": "^1.1.1",
-    "mongoose": "^6.1.8",
+    "mongoose": "^6.11.3",
     "normalize.css": "^8.0.1",
     "parcel": "^2.2.0",
     "sass": "^1.48.0"
